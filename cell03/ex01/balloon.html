@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Explode this balloon </title>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+      #balloon {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        border-radius: 50%;
+        transition: background-color 0.2s, width 0.2s, height 0.2s;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="balloon"></div>
+
+    <script>
+      const balloon = document.getElementById("balloon");
+      const colors = ["red", "green", "blue"];
+      let currentColorIndex = 0;
+      let currentSize = 200;
+
+      const updateBalloon = () => {
+        balloon.style.width = currentSize + "px";
+        balloon.style.height = currentSize + "px";
+        balloon.style.backgroundColor = colors[currentColorIndex];
+      };
+
+      balloon.addEventListener("click", () => {
+        currentSize += 10;
+        currentColorIndex = (currentColorIndex + 1) % colors.length;
+
+        if (currentSize > 420) {
+          // Reset to initial state (explosion)
+          currentSize = 200;
+          currentColorIndex = 0;
+          alert("Boom! The balloon exploded and reset!");
+        }
+        updateBalloon();
+      });
+
+      balloon.addEventListener("mouseleave", () => {
+        currentSize = Math.max(200, currentSize - 5);
+        currentColorIndex = (currentColorIndex - 1 + colors.length) % colors.length;
+        updateBalloon();
+      });
+    </script>
+  </body>
+</html>
+
