@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+}
+
+.box {
+  display: flex;
+  width: 100%;
+  height: 100vh; /* Ensures the table covers the full viewport height */
+}
+
+.b1,
+.b2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Colors */
+.b1 {
+  background-color: blue;
+}
+
+.b2 {
+  background-color: green;
+}
+
+/* Make the boxes responsive */
+@media (max-width: 768px) {
+  .box {
+    flex-direction: column;
+  }
+}
+
