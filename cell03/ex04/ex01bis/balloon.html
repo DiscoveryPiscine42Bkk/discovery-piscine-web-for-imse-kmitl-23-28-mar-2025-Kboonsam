@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Explode this balloon </title>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+      #balloon {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        border-radius: 50%;
+        transition: background-color 0.2s, width 0.2s, height 0.2s;
+        cursor: pointer;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div id="balloon"></div>
+
+    <script>
+      $(document).ready(function () {
+        let colors = ["red", "green", "blue"];
+        let currentColorIndex = 0;
+        let currentSize = 200;
+
+        const updateBalloon = () => {
+          $("#balloon").css({
+            width: currentSize + "px",
+            height: currentSize + "px",
+            backgroundColor: colors[currentColorIndex],
+          });
+        };
+
+        $("#balloon").on("click", function () {
+          currentSize += 10;
+          currentColorIndex = (currentColorIndex + 1) % colors.length;
+
+          if (currentSize > 420) {
+            
+            currentSize = 200;
+            currentColorIndex = 0;
+            alert("Boom! The balloon exploded and reset!");
+          }
+          updateBalloon();
+        });
+
+        $("#balloon").on("mouseleave", function () {
+          currentSize = Math.max(200, currentSize - 5);
+          currentColorIndex = (currentColorIndex - 1 + colors.length) % colors.length;
+          updateBalloon();
+        });
+
+        updateBalloon();
+      });
+    </script>
+  </body>
+</html>
+
