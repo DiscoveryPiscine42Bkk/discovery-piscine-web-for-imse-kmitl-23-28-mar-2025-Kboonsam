@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link href="calc.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="calc.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="container">
+        <h1>Calculator</h1>
+        <form id="calcForm">
+          <input type="text" id="num1" required />
+          <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+          </select>
+          <input type="text" id="num2" required />
+          <input type="submit" value="Try me!" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+
