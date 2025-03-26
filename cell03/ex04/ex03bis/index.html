@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO List</title>
+    <style>
+      #ft_list {
+        width: 300px;
+        margin: auto;
+        padding: 10px;
+        border: 1px solid #000;
+        min-height: 100px;
+        background-color: #f0f0f0; /* Background of TODO list box */
+      }
+      #ft_list > div {
+        margin: 10px;
+        background-color: green; /* Green background for each TODO item */
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        color: white;
+        text-align: center;
+      }
+      #ft_list > div:hover {
+        background-color: #2ecc71; /* Lighter green on hover */
+      }
+      button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: black; /* Black background for NEW button */
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      button:hover {
+        background-color: #222;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="todo.js"></script>
+  </head>
+  <body>
+    <h1 style="text-align: center">TODO LIST</h1>
+    <div id="ft_list"></div>
+    <button id="newTodo">NEW</button>
+  </body>
+</html>
+
+
