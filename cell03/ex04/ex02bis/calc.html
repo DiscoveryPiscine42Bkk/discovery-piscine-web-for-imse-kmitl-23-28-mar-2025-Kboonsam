@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, select, button {
+            margin: 5px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            cursor: pointer;
+            background-color: black;
+            color: white;
+            border: none;
+        }
+        button:hover {
+            background-color: #222;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculator</h1>
+        <form id="calcForm">
+            <input type="text" id="num1" required>
+            <select id="operator">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+            </select>
+            <input type="text" id="num2" required>
+            <button type="submit">Try me!</button>
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            setInterval(() => alert("Please, use me..."), 30000);
+
+            $("#calcForm").submit(function (event) {
+                event.preventDefault();
+
+                let num1 = parseFloat($("#num1").val());
+                let num2 = parseFloat($("#num2").val());
+                let operator = $("#operator").val();
+                let result;
+
+                if (isNaN(num1) || isNaN(num2)) {
+                    return alert("Please enter valid numbers.");
+                }
+
+                if (num1 < 0 || num2 < 0) {
+                    return alert("Error.");
+                }
+
+                switch (operator) {
+                    case "+": result = num1 + num2; break;
+                    case "-": result = num1 - num2; break;
+                    case "*": result = num1 * num2; break;
+                    case "/": result = num2 !== 0 ? num1 / num2 : alert("It's over 9000!"); break;
+                    case "%": result = num2 !== 0 ? num1 % num2 : alert("It's over 9000!"); break;
+                    default: return alert("Error: Invalid operator.");
+                }
+
+                if (result !== undefined) alert("Result: " + result);
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
