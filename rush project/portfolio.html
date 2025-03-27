@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kritkarin Boonsamer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            overflow: auto;
+            height: 100%;
+            position: relative;
+            color: #fff;
+            z-index: 0;
+            background: url('https://media.tenor.com/Jo0PbgBIZzAAAAAM/chill-guy-my-new-character.gif') no-repeat center center fixed;
+            background-size: cover; 
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px 0;
+            text-align: center;
+            z-index: 10;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.5em;
+            margin: 0 20px;
+            padding: 10px;
+        }
+
+        nav a:hover {
+            background-color: #f1c40f;
+            border-radius: 5px;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: -1; 
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.5); 
+            padding: 55px 20px; 
+            text-align: center;
+            color: #fff; 
+            z-index: 1;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            color: #f1c40f;
+        }
+
+        section {
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+            z-index: 1;
+        }
+
+        section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #f1c40f;
+        }
+
+        .bio, .media, .contact {
+            margin-bottom: 20px;
+        }
+
+        .bio p, .contact form {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #fff;
+        }
+
+        .media {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 20px;
+            justify-items: center;
+            margin-top: 20px;
+        }
+
+        .media img {
+            width: 100%; 
+            height: auto;
+            border-radius: 10px;
+            max-width: 300px; 
+        }
+
+        .bio {
+            text-align: center;
+        }
+
+        .bio img {
+            display: block;
+            max-width: 50%;
+            height: auto;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+
+        .contact {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: calc(100vh - 80px);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact a {
+            text-decoration: none;
+        }
+
+        .contact button {
+            background-color: #f1c40f;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin: 10px 0;
+        }
+
+        .contact button:hover {
+            background-color: #e1b01f;
+        }
+
+        
+        #about, #portfolio, #contact {
+            padding-top: 80px;
+        }
+
+        .media p {
+            margin-bottom: 20px; 
+        }
+
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#about">About Me</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact Me</a>
+</nav>
+
+<div class="overlay"></div>
+
+<header>
+    <h1>Kritkarin Boonsamer</h1>
+</header>
+
+<section id="about" class="bio">
+    <h2>About Me</h2>
+    <p>I’m Kritkarin Boonsamer, Currently studying at KMITL Institute. My hobbies are playing games and taking pictures of action figures.</p>
+
+    <img src="https://scontent.fbkk28-1.fna.fbcdn.net/v/t39.30808-6/405116047_3538656186463423_2399844515363389903_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=jxnsjAwo3wsQ7kNvgHrvYW_&_nc_oc=Adn7XTVRdbIs049lv8qMR5bCND7EyhFYEIjzFQnSfbdUCuLW8T6cbejtL_FFXD9faNWrheFighN-VrCrE161xOK0&_nc_zt=23&_nc_ht=scontent.fbkk28-1.fna&_nc_gid=BVZfJ-XuZl6qaSIS-6gJPQ&oh=00_AYEHfnvHLk6q5GFgj7ozWmMYcq1oJOwOx9Sv_MmHDZU1mg&oe=67EB3787" alt="KRITKARIN BOONSAMER" />
+</section>
+
+<section id="portfolio" class="media">
+    <h2>Portfolio</h2>
+    <p>Some of the photos I took:</p>
+    <img src="https://scontent.fbkk28-1.fna.fbcdn.net/v/t39.30808-6/486792394_3930641907264847_1711219121358157878_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=58-xq3N8yZoQ7kNvgFVtcHY&_nc_oc=AdkQs92cxvoDTCt6_lXeiHqI00q8NV1gpT1OvQTT2hf8x8XpotZC6pShwJ7gmb15lXlZcCUdVus00NAiH-kefhH7&_nc_zt=23&_nc_ht=scontent.fbkk28-1.fna&_nc_gid=tI8AcdgXlxsLlf1VZJV1Eg&oh=00_AYGtcdVNmOXEpmQM8y0UvSNvsCYIG4nJAeFH66IP6EMNpQ&oe=67EB6927" alt="Project 1">
+    <img src="https://scontent.fbkk28-1.fna.fbcdn.net/v/t39.30808-6/486533968_3930641753931529_8898971911178241514_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=nxYKEdzUph0Q7kNvgG4w4Wf&_nc_oc=AdndXO_QCsVO6S1ToDcm6FYKbKaygMmwxbbnMVJr6M3BKkbYxu3WrMeyd7JDMVq4UbEMN3FsxrAHFwXF5R3pqgTI&_nc_zt=23&_nc_ht=scontent.fbkk28-1.fna&_nc_gid=QHBDi_jdBLBbbDclsGoNUA&oh=00_AYGyc_mvyEAzlFeyMAc_brWvVTRti67F7QkamDhglqE5Yw&oe=67EB5E7C" alt="Project 2">
+    <img src="https://scontent.fbkk28-1.fna.fbcdn.net/v/t39.30808-6/486610647_3930641680598203_7704933653030852298_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=2CBVs5w_F9QQ7kNvgEOhOk1&_nc_oc=AdnR0Lr3rgeS3XioS4NtqKWPnbSA0aSQGrbpyj73V2UjNxq5eo4ELb1xv_JDxi8lcxuoVpl4BPjj1xLAJFCNXC_F&_nc_zt=23&_nc_ht=scontent.fbkk28-1.fna&_nc_gid=gxiilUpHwGKWIv2QRmLp9g&oh=00_AYGdeKTg6ib6YHVGVd1rLJQJFjRCcglglxzBWpXOasaPxQ&oe=67EB5DB1" alt="Project 3">
+    <img src="https://scontent.fbkk28-1.fna.fbcdn.net/v/t39.30808-6/487098895_3930641820598189_8006608757046134690_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=NWWDmaV6c7gQ7kNvgHxnFIk&_nc_oc=AdlIYNIGT1YhBvktM7zjGTysyLL0I3oY1oQyqy2XVvZbAHDCEepc9D7BzR3tUAJ4aO_vlCwxN355304qSeqNUusX&_nc_zt=23&_nc_ht=scontent.fbkk28-1.fna&_nc_gid=cQiYWSaqWMMWV3Ogr9S4XA&oh=00_AYHmFzU8r2JHfvTf7c83Fq1eICsxf6hYpzWoIs-r3neyxw&oe=67EB614E" alt="Project 4">
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    
+    <a href="https://www.instagram.com/kongkgg_?igsh=MXY0amdxOHA3ZGVwaA==" target="_blank">
+        <button>My Instagram</button>
+    </a>
+
+    <a href="https://www.facebook.com/kitkarin.Boonsamer/" target="_blank">
+        <button>My Facebook</button>
+    </a>
+</section>
+
+<footer>
+    <p>KRITKARIN BOONSAMER</p>
+</footer>
+
+</body>
+</html>
